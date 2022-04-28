@@ -1,0 +1,6 @@
+const x := 1;
+var x;
+procedure x;
+do
+	x := x * x + x;
+od.

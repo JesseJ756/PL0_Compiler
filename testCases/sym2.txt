@@ -1,0 +1,28 @@
+const a := 1, b := 2;
+var u;
+procedure A;
+    const c := 5;
+    var v;
+    procedure B;
+        var x, w;
+        procedure C;
+            var x, y, z;
+            procedure D;
+                const d := 99, e := 66;
+                var zz, aa;
+                do
+                    zz := d + 6;
+                    u := 6
+                od;
+            do
+                x := c;
+            od;
+        do
+            x := a + b
+        od;
+    do
+        u := a * b
+    od;
+do
+    u := 5;
+od.

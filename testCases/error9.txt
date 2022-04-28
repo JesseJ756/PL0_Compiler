@@ -1,0 +1,6 @@
+var x;
+do
+	x := 5;
+	while x >= 0 
+		write x
+od.

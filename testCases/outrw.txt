@@ -1,0 +1,85 @@
+Lexeme Table:
+lexeme		token type
+        var	2
+          x	12
+          ,	29
+          y	12
+          ;	31
+         do	4
+       read	11
+          x	12
+          ;	31
+       read	11
+          y	12
+          ;	31
+      write	10
+          x	12
+          +	15
+          y	12
+          ;	31
+      write	10
+          x	12
+          -	16
+          y	12
+          ;	31
+         od	5
+          .	30
+
+Token List:
+2 12 x 29 12 y 31 4 11 12 x 31 11 12 y 31 10 12 x 15 12 y 31 10 12 x 16 12 y 31 5 30 
+Symbol Table:
+Kind | Name        | Value | Level | Address | Mark
+---------------------------------------------------
+   3 |        main |     0 |     0 |     3 |     1
+   2 |           x |     0 |     0 |     0 |     1
+   2 |           y |     0 |     0 |     1 |     1
+Line	OP Code	OP Name	L	M
+0	7	JMP	0	3
+1	6	INC	0	2
+2	9	RED	0	2
+3	4	STO	0	0
+4	9	RED	0	2
+5	4	STO	0	1
+6	3	LOD	0	0
+7	3	LOD	0	1
+8	2	ADD	0	2
+9	9	WRT	0	1
+10	3	LOD	0	0
+11	3	LOD	0	1
+12	2	SUB	0	3
+13	9	WRT	0	1
+14	9	HAL	0	3
+				PC	BP	SP	DP	data
+Initial values:			0	45	3000	44
+ 0	JMP	0	3	3	45	3000	44	
+	stack : 
+ 1	INC	0	2	6	45	3000	46	0 0 
+	stack : 
+Please Enter an Integer:  2	SYS	0	2	9	45	3000	47	0 0 3 
+	stack : 
+ 3	STO	0	0	12	45	3000	46	3 0 
+	stack : 
+Please Enter an Integer:  4	SYS	0	2	15	45	3000	47	3 0 4 
+	stack : 
+ 5	STO	0	1	18	45	3000	46	3 4 
+	stack : 
+ 6	LOD	0	0	21	45	3000	47	3 4 3 
+	stack : 
+ 7	LOD	0	1	24	45	3000	48	3 4 3 4 
+	stack : 
+ 8	ADD	0	2	27	45	3000	47	3 4 7 
+	stack : 
+Top of Stack Value: 7
+ 9	SYS	0	1	30	45	3000	46	3 4 
+	stack : 
+10	LOD	0	0	33	45	3000	47	3 4 3 
+	stack : 
+11	LOD	0	1	36	45	3000	48	3 4 3 4 
+	stack : 
+12	SUB	0	3	39	45	3000	47	3 4 -1 
+	stack : 
+Top of Stack Value: -1
+13	SYS	0	1	42	45	3000	46	3 4 
+	stack : 
+14	SYS	0	3	45	45	3000	46	3 4 
+	stack : 

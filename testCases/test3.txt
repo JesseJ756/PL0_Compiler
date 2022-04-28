@@ -1,0 +1,19 @@
+// multiply three numbers together -- should print twice, 1 and then 180
+
+var x,y,z;
+procedure mult;
+	var answer;
+	do
+		answer:=0;
+		answer:=		answer + 1;	// spacing is intentional
+		write answer;
+		answer:=x*y*z;
+		write answer;
+	od;
+
+do
+	x:=3;
+	y:=6;
+	z:=10;
+	call mult;
+od.

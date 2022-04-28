@@ -1,0 +1,30 @@
+procedure invert;
+    var input, result, rem;
+    do
+        result := 0;
+        read input;
+        while input != 0 do
+            do
+                rem := input % 10;
+                result := result * 10 + rem;
+                input := input / 10;
+            od;
+        write result;
+    od;
+procedure power;
+    var base, exp, res;
+    do
+        read base;
+        read exp;
+        res := 1;
+        while exp > 0 do
+            do
+                res := res * base;
+                exp := exp - 1;
+            od;
+        write res;
+    od;
+do
+    call invert;
+    call power;
+od.

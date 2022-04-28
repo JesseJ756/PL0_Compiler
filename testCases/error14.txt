@@ -1,0 +1,4 @@
+var x, y, z
+do
+	x := 5
+od.

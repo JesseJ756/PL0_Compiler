@@ -1,0 +1,16 @@
+const a := 2, b := 3, c := 5;
+var x;
+do
+    x := a * b * c;
+
+    when odd x do
+        x := x - 1
+    elsedo
+        when x % 2 != 0 do
+            x := x * 3;
+
+    when c - b = a do
+        x := 1
+    elsedo
+        x := 0
+od.

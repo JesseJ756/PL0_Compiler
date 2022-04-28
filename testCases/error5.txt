@@ -1,0 +1,5 @@
+var x;
+procedure alpha;;
+do
+	x 14 * alpha + (51 % 7);;
+od.

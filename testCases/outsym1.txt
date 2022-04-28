@@ -1,0 +1,112 @@
+Lexeme Table:
+lexeme		token type
+      const	1
+          a	12
+         :=	14
+          1	13
+          ,	29
+          b	12
+         :=	14
+          2	13
+          ,	29
+          c	12
+         :=	14
+          5	13
+          ,	29
+          d	12
+         :=	14
+         10	13
+          ,	29
+          e	12
+         :=	14
+         15	13
+          ;	31
+        var	2
+          v	12
+          ,	29
+          w	12
+          ,	29
+          x	12
+          ,	29
+          y	12
+          ,	29
+          z	12
+          ;	31
+  procedure	3
+      alpha	12
+          ;	31
+          ;	31
+  procedure	3
+       beta	12
+          ;	31
+          ;	31
+  procedure	3
+      gamma	12
+          ;	31
+          ;	31
+         do	4
+          v	12
+         :=	14
+          a	12
+          +	15
+          b	12
+          +	15
+          c	12
+         od	5
+          .	30
+
+Token List:
+1 12 a 14 13 1 29 12 b 14 13 2 29 12 c 14 13 5 29 12 d 14 13 10 29 12 e 14 13 15 31 2 12 v 29 12 w 29 12 x 29 12 y 29 12 z 31 3 12 alpha 31 31 3 12 beta 31 31 3 12 gamma 31 31 4 12 v 14 12 a 15 12 b 15 12 c 5 30 
+Symbol Table:
+Kind | Name        | Value | Level | Address | Mark
+---------------------------------------------------
+   3 |        main |     0 |     0 |    21 |     1
+   1 |           a |     1 |     0 |     0 |     1
+   1 |           b |     2 |     0 |     0 |     1
+   1 |           c |     5 |     0 |     0 |     1
+   1 |           d |    10 |     0 |     0 |     1
+   1 |           e |    15 |     0 |     0 |     1
+   2 |           v |     0 |     0 |     0 |     1
+   2 |           w |     0 |     0 |     1 |     1
+   2 |           x |     0 |     0 |     2 |     1
+   2 |           y |     0 |     0 |     3 |     1
+   2 |           z |     0 |     0 |     4 |     1
+   3 |       alpha |     0 |     0 |     3 |     1
+   3 |        beta |     0 |     0 |     9 |     1
+   3 |       gamma |     0 |     0 |    15 |     1
+Line	OP Code	OP Name	L	M
+0	7	JMP	0	21
+1	6	INC	0	4
+2	2	RTN	0	0
+3	6	INC	0	4
+4	2	RTN	0	0
+5	6	INC	0	4
+6	2	RTN	0	0
+7	6	INC	0	5
+8	1	LIT	0	1
+9	1	LIT	0	2
+10	2	ADD	0	2
+11	1	LIT	0	5
+12	2	ADD	0	2
+13	4	STO	0	0
+14	9	HAL	0	3
+				PC	BP	SP	DP	data
+Initial values:			0	45	3000	44
+ 0	JMP	0	21	21	45	3000	44	
+	stack : 
+ 7	INC	0	5	24	45	3000	49	0 0 0 0 0 
+	stack : 
+ 8	LIT	0	1	27	45	3000	50	0 0 0 0 0 1 
+	stack : 
+ 9	LIT	0	2	30	45	3000	51	0 0 0 0 0 1 2 
+	stack : 
+10	ADD	0	2	33	45	3000	50	0 0 0 0 0 3 
+	stack : 
+11	LIT	0	5	36	45	3000	51	0 0 0 0 0 3 5 
+	stack : 
+12	ADD	0	2	39	45	3000	50	0 0 0 0 0 8 
+	stack : 
+13	STO	0	0	42	45	3000	49	8 0 0 0 0 
+	stack : 
+14	SYS	0	3	45	45	3000	49	8 0 0 0 0 
+	stack : 

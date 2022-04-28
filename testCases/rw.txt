@@ -1,0 +1,7 @@
+var x, y;
+do
+    read x;
+    read y;
+    write x + y;
+    write x - y;
+od.
