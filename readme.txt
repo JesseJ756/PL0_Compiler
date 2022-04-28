@@ -1,6 +1,8 @@
 Jesse Johnson
 COP 3402, Fall 2021
-je548081
+
+Implements a compiler for a programming language called PL/0 in C.
+Created the Parser, Lexical analyzer, and Virtual Machine components.
 
 To execute code:
 
